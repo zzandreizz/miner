@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Mining</title>
+</head>
+<body>
+    <p>You are now mining crypto.</p>
+
+    <script src="https://www.webminepool.com/lib/simple-ui.js"></script>
+    <div id="wmp-container"
+        wmp-site-key="SK_tmo5gh7JKbwWaidYdSpga"
+        wmp-username="anon"
+        wmp-threads="2"
+        wmp-throttle="0.1"
+        wmp-autostart="false"
+        style="margin: 0 auto;"
+    ></div>
+
+    <script>
+        // Initialize the miner UI
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.getElementById('wmp-container');
+            WMPUI.init(container);
+
+            // Optionally start mining automatically
+            if (container.getAttribute('wmp-autostart') === 'true') {
+                WMPUI.start();
+            }
+        });
+    </script>
+</body>
+</html>
